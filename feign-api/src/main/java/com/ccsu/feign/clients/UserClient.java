@@ -1,6 +1,7 @@
-package com.ccsu.article.clients;
+package com.ccsu.feign.clients;
 
-import com.ccsu.article.entity.User;
+
+import com.ccsu.feign.entity.User;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;

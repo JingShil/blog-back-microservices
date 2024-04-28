@@ -1,4 +1,4 @@
-package com.ccsu.article.dto;
+package com.ccsu.feign.dto;
 
 import lombok.Data;
 

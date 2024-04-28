@@ -1,12 +1,13 @@
 package com.ccsu.article;
 
 
+import com.ccsu.feign.clients.UserClient;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
-@EnableFeignClients
+@EnableFeignClients(clients = {UserClient.class})
 public class ArticleServiceApplication {
 
     public static void main(String[] args) {

@@ -51,19 +51,12 @@
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
         </dependency>
-<!--        feign-->
+<!--        统一引入feign-api-->
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
-            <version>2.2.7.RELEASE</version>
+            <groupId>com.ccsu</groupId>
+            <artifactId>feign-api</artifactId>
+            <version>1.0</version>
         </dependency>
-
-<!--        HttpClient-->
-        <dependency>
-            <groupId>io.github.openfeign</groupId>
-            <artifactId>feign-httpclient</artifactId>
-        </dependency>
-
     </dependencies>
     <build>
         <finalName>app</finalName>

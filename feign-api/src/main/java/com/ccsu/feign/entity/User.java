@@ -1,4 +1,5 @@
-package com.ccsu.article.entity;
+package com.ccsu.feign.entity;
+
 
 import lombok.Data;
 
