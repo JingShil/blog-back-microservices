@@ -1,0 +1,13 @@
+server:
+  port: 8087
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3307/img-service?serverTimezone=GMT%2b8&useSSL=false&characterEncoding=UTF-8
+    username: root
+    password: "root"
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+  application:
+    name: img-service
