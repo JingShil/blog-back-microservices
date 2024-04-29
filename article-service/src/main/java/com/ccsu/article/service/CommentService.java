@@ -7,7 +7,7 @@ import com.ccsu.article.entity.Comment;
 
 
 public interface CommentService extends IService<Comment> {
-//    public IPage<CommentReply> getComments(String articleId,
-//                                           Integer pageNumber,
-//                                           Integer pageSize);
+    public IPage<CommentReply> getComments(String articleId,
+                                           Integer pageNumber,
+                                           Integer pageSize);
 }

@@ -1,11 +1,12 @@
 server:
   port: 8086
+  location: "125.88.217.207"
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3307/article-service?serverTimezone=GMT%2b8&useSSL=false&characterEncoding=UTF-8
+    url: jdbc:mysql://125.88.217.207:3306/article-service?serverTimezone=GMT%2b8&useSSL=false&characterEncoding=UTF-8
     username: root
-    password: "root"
+    password: "1819891412s"
   cloud:
     nacos:
       server-addr: localhost:8848

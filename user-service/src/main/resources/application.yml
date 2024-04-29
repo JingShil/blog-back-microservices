@@ -1,14 +1,47 @@
 
 server:
   port: 8085
+  location: "125.88.217.207"
 spring:
-  datasource:
+  redis:  #redis配置
+    database: 0
+    host: ""
+    port: 6379
+    password: "125.88.217.207"
+    timeout: 3000
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+    token: #token超时时间
+      expiration-time: 1800
+  datasource: #MYSQL配置
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3307/user-service?serverTimezone=GMT%2b8&useSSL=false&characterEncoding=UTF-8
+    url: jdbc:mysql://125.88.217.207:3306/user-service?serverTimezone=GMT%2b8&useSSL=false&characterEncoding=UTF-8
     username: root
-    password: "root"
+    password: "1819891412s"
   cloud:
     nacos:
       server-addr: localhost:8848
   application:
     name: user-service
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+user:
+  adminId: "1771163535399747585"
+
+#file:
+#  path: "E:/ImgData/Blog/"
+

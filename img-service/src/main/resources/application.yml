@@ -1,13 +1,20 @@
 server:
   port: 8087
+  location: "125.88.217.207"
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3307/img-service?serverTimezone=GMT%2b8&useSSL=false&characterEncoding=UTF-8
+    url: jdbc:mysql://125.88.217.207:3306/img-service?serverTimezone=GMT%2b8&useSSL=false&characterEncoding=UTF-8
     username: root
-    password: "root"
+    password: "1819891412s"
   cloud:
     nacos:
       server-addr: localhost:8848
   application:
     name: img-service
+
+file:
+  path: "/usr/local/data/img/"
+
+img:
+  downloadPath: "http://${server.location}:${server.port}/img/download?fileName="

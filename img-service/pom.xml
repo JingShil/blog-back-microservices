@@ -51,6 +51,13 @@
             <artifactId>mybatis-plus-boot-starter</artifactId>
         </dependency>
 
+        <!--        统一引入feign-api-->
+        <dependency>
+            <groupId>com.ccsu</groupId>
+            <artifactId>feign-api</artifactId>
+            <version>1.0</version>
+        </dependency>
+
 
     </dependencies>
     <build>
