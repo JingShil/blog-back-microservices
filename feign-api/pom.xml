@@ -8,6 +8,7 @@
         <groupId>com.ccsu</groupId>
         <version>1.0</version>
     </parent>
+    <packaging>jar</packaging>
     <dependencies>
         <!-- JPA依赖 -->
         <dependency>
@@ -36,11 +37,16 @@
 
     </dependencies>
     <build>
-        <finalName>app</finalName>
+        <finalName>feign-api</finalName>
         <plugins>
+<!--            <plugin>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--            </plugin>-->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+
             </plugin>
         </plugins>
     </build>

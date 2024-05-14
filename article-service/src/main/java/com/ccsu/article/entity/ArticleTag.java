@@ -4,6 +4,6 @@ import lombok.Data;
 
 @Data
 public class ArticleTag {
-    private String ArticleId;
+    private String articleId;
     private String tagId;
 }

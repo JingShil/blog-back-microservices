@@ -1,5 +1,6 @@
 package com.ccsu.article.entity;
 
+import com.ccsu.article.index.ArticleIndex;
 import lombok.Data;
 
 import javax.persistence.PrePersist;
@@ -28,5 +29,20 @@ public class Article {
     @PreUpdate
     protected void onupdate(){
         updateTime=LocalDateTime.now();
+    }
+
+    public void setArticleIndex(ArticleIndex article){
+        this.id=article.getId();
+        this.userId= article.getUserId();
+        this.title= article.getTitle();
+        this.content = article.getContent();
+        this.published = article.getPublished();
+        this.likeNum = article.getLikeNum();
+        this.collectNum = article.getCollectNum();
+        this.viewNum = article.getViewNum();
+        this.commentNum = article.getCommentNum();
+        this.createTime = article.getCreateTime();
+        this.updateTime = article.getUpdateTime();
+        this.img = article.getImg();
     }
 }

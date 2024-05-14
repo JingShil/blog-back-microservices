@@ -9,6 +9,9 @@
         <module>user-service</module>
         <module>article-service</module>
         <module>img-service</module>
+        <module>feign-api</module>
+        <module>gateway</module>
+        <module>es-service</module>
 <!--        <module>order-service</module>-->
 <!--        <module>eureka-server</module>-->
     </modules>
@@ -105,7 +108,33 @@
                 <version>2.0.4.RELEASE</version>
             </dependency>
 
-
+<!--            elasticsearch-->
+<!--            <dependency>-->
+<!--                <groupId>org.elasticsearch.client</groupId>-->
+<!--                <artifactId>elasticsearch-rest-high-level-client</artifactId>-->
+<!--                <version>7.12.1</version>-->
+<!--            </dependency>-->
+            <dependency>
+                <groupId>org.elasticsearch</groupId>
+                <artifactId>elasticsearch</artifactId>
+                <version>7.12.1</version>
+            </dependency>
+            <dependency>
+                <groupId>org.elasticsearch.client</groupId>
+                <artifactId>elasticsearch-rest-high-level-client</artifactId>
+                <version>7.12.1</version>
+            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>org.elasticsearch</groupId>-->
+<!--                <artifactId>elasticsearch</artifactId>-->
+<!--                <version>7.12.1</version>&ndash;&gt;-->
+<!--            </dependency>-->
+<!--            -->
+<!--            <dependency>-->
+<!--                <groupId>org.elasticsearch.client</groupId>-->
+<!--                <artifactId>elasticsearch-rest-high-level-client</artifactId>-->
+<!--                <version>7.12.1</version>&ndash;&gt;-->
+<!--            </dependency>-->
 
         </dependencies>
     </dependencyManagement>
@@ -115,5 +144,32 @@
 <!--            <artifactId>lombok</artifactId>-->
 <!--        </dependency>-->
     </dependencies>
+
+    <build>
+        <plugins>
+
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.19.1</version>
+                <configuration>
+                    <!-- 默认关掉单元测试，不用手动关闭了 -->
+                    <skipTests>true</skipTests>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
 
 </project>

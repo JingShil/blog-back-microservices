@@ -5,9 +5,9 @@ server:
 spring:
   redis:  #redis配置
     database: 0
-    host: ""
+    host: "localhost"
     port: 6379
-    password: "125.88.217.207"
+    password: "1819891412"
     timeout: 3000
     jedis:
       pool:
@@ -19,7 +19,7 @@ spring:
       expiration-time: 1800
   datasource: #MYSQL配置
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://125.88.217.207:3306/user-service?serverTimezone=GMT%2b8&useSSL=false&characterEncoding=UTF-8
+    url: jdbc:mysql://localhost:3306/user-service?serverTimezone=GMT%2b8&useSSL=false&characterEncoding=UTF-8
     username: root
     password: "1819891412s"
   cloud:

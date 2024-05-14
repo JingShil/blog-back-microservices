@@ -8,6 +8,7 @@
         <groupId>com.ccsu</groupId>
         <version>1.0</version>
     </parent>
+    <packaging>jar</packaging>
     <dependencies>
 
         <!--        nacos服务发现依赖-->
@@ -28,10 +29,20 @@
             <artifactId>lombok</artifactId>
         </dependency>
 
+        <!--        redis-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
     </dependencies>
     <build>
-        <finalName>app</finalName>
+        <finalName>gateway</finalName>
         <plugins>
+<!--            <plugin>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--            </plugin>-->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>

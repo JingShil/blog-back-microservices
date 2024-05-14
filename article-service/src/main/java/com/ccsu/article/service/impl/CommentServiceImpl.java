@@ -30,8 +30,6 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
     @Autowired
     private ReplyService replyService;
 
-    @Value("${img.downloadPath}")
-    private String downloadPath;
 
     @Autowired
     private UserClient userClient;

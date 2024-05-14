@@ -23,8 +23,6 @@ import java.util.stream.Collectors;
 public class ReplyServiceImpl extends ServiceImpl<ReplyMapper, Reply> implements ReplyService {
 
 
-    @Value("${img.downloadPath}")
-    private String downloadPath;
 
     @Autowired
     private UserClient userClient;

@@ -9,9 +9,12 @@ import com.ccsu.article.entity.Article;
 import com.ccsu.article.entity.ArticleListElement;
 import com.ccsu.article.entity.ArticleTag;
 import com.ccsu.article.mapper.ArticleMapper;
+import com.ccsu.article.repository.ArticleRepository;
 import com.ccsu.article.service.ArticleService;
 import com.ccsu.article.service.ArticleTagService;
 import com.ccsu.article.utils.canstant.Order;
+import org.elasticsearch.action.get.GetRequest;
+import org.elasticsearch.client.RestHighLevelClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,6 +26,16 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
 
     @Autowired
     private ArticleTagService articleTagService;
+
+    @Autowired
+    private ArticleRepository articleRepository;
+
+    @Autowired
+    private RestHighLevelClient client;
+
+    public void getArticleIndexList(ArticleListElement articleListElement){
+//        GetRequest request = new GetRequest()
+    }
 
     @Override
     public IPage<Article> getArticles(ArticleListElement articleListElement){

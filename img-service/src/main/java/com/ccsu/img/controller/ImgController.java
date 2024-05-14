@@ -23,8 +23,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-@RequestMapping("/img")
+
 @RestController
+@RequestMapping("/img")
 public class ImgController {
     @Autowired
     private ImgMapper imgMapper;
@@ -135,7 +136,7 @@ public class ImgController {
         }
     }
 
-    @GetMapping("download")
+    @GetMapping("/download")
     public ResponseEntity<Resource> download(@RequestParam("fileName") String fileName) {
         String uploadDir = filePath;
         String finalFilePath = uploadDir + fileName;
